@@ -240,6 +240,7 @@ ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Position = UDim2.new(0.359895825, 0, 0.190303028, 0)
 ScrollingFrame.Size = UDim2.new(0, 335, 0, 474)
 ScrollingFrame.Visible = false
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 10, 0)
 
 UIListLayout.Parent = ScrollingFrame
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -372,3 +373,8 @@ local function FHGG_fake_script() -- ScrollingFrame.Dragify
 	dragify(script.Parent)
 end
 coroutine.wrap(FHGG_fake_script)()
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "FE Annoying Admin";
+		Text = "Script successfully loaded!"
+	})
