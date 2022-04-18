@@ -18,6 +18,20 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
 	if split[1] == ".execute" then
 		loadstring(readfile(split[2]))()
 	end
+	
+	if message == ".grabtools" then
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+local Backpack = Player.Backpack
+
+local GrabTools = function()
+local WorkspaceDescendants = workspace:GetDescendants()
+
+for _, Descendant in pairs(WorkspaceDescendants) do
+if Descendant:IsA("Tool") or Descendant:IsA("HopperBin") then
+Descendant:Clone().Parent = Backpack
+end
+	end
 
 	if split[1] == ".orbit" then
 		getgenv().Orbitingygifqwdoqu = true
@@ -112,9 +126,6 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
 					":/",
 					">:C",
 					">:[",
-				        "script ware on top",
-				        "jellymid?",
-				        "no girls?",
 					"Kid.",
 					"Stop being dumb.",
 					"Why are you talking to me?",
