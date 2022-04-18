@@ -4,6 +4,18 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
 		getgenv().Orbitingygifqwdoqu = false
 	end
 	
+	if string[1] == ".fov" then
+		game.Workspace.Camera.FieldOfView = string[2]
+	end
+	
+	if string[1] == ".ws" then
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = string[2]
+	end
+	
+		if string[1] == ".jp" then
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = string[2]
+	end
+	
 	if message == ".rejoin" then
 		local tpservice= game:GetService("TeleportService")
 local plr = game.Players.LocalPlayer
