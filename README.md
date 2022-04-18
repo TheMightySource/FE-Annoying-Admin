@@ -13,6 +13,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMightySource/FE-A
  * .unorbit
  * .annoy <full player name> e.g: .annoy Glizzy_Phobia
  * .unannoy
+ * .grabtools (HASN'T BEEN TESTED YET!)
  * .droptools
  * .removemesh
  * .chatbot <time to chat> e.g: .chatbot 3
