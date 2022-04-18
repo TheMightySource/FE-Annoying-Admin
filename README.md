@@ -17,8 +17,5 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMightySource/FE-A
  * .removemesh
  * .chatbot <time to chat> e.g: .chatbot 3
  * .unchatbot
- * .ws <speed> e.g: .ws 100
- * .fov <field of view> e.g: .fov 120
- * .jp <jump power> e.g: .jp 150
  
  # BEING WORKED ON!
