@@ -20,7 +20,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
 	end
 	
 	if message == ".grabtools" then
-local Players = game:GetService("Players")
+		local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 local Backpack = Player.Backpack
 
@@ -31,6 +31,10 @@ for _, Descendant in pairs(WorkspaceDescendants) do
 if Descendant:IsA("Tool") or Descendant:IsA("HopperBin") then
 Descendant:Clone().Parent = Backpack
 end
+end
+end
+
+GrabTools()
 	end
 
 	if split[1] == ".orbit" then
