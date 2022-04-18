@@ -276,7 +276,7 @@ local function LPFOMVV_fake_script() -- ScrollingFrame.LocalScript
 	end)
 
 	game.Players.PlayerRemoving:Connect(function(player)
-		script.Parent:FindFirstChild(player.Name):Remove()
+		script.Parent:FindFirstChild(player.Name).Parent = game.Workspace
 	end)
 end
 coroutine.wrap(LPFOMVV_fake_script)()
