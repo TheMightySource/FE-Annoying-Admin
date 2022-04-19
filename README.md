@@ -18,5 +18,6 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMightySource/FE-A
  * .removemesh
  * .chatbot <time to chat> e.g: .chatbot 3
  * .unchatbot
+ * .to <player> e.g: .to Glizzy_Phobia
  
  # BEING WORKED ON!
