@@ -4,6 +4,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
 		getgenv().Orbitingygifqwdoqu = false
 	end
 
+if split[1] == ".to" then
+local plr1 = game.Players.LocalPlayer.Character
+local plr2 = game.Workspace:FindFirstChild(split[2])
+plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+end
+
 	if message == ".rejoin" then
 		local tpservice= game:GetService("TeleportService")
 		local plr = game.Players.LocalPlayer
