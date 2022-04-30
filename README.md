@@ -3,6 +3,8 @@
 ## Script
 Open sourced project made by Phobia
 ```lua
+getgenv().NerdifyHat = "Nerd" -- Set this to the name of your hat that you want to nerdify
+
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMightySource/FE-Annoying-Admin/main/Main.lua'),true))()
 ```
 # Press Right Ctrl to open player list (press a name and it sets clipboard for easy use)
