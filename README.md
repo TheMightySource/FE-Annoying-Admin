@@ -15,10 +15,10 @@ credits to spec for nerdify https://github.com/specowos/lua-projects/tree/main/b
  * .unorbit
  * .annoy <full player name> e.g: .annoy Glizzy_Phobia
  * .unannoy
- * .grabtools (HASN'T BEEN TESTED YET!)
+ * .grabtools (hasn't been tested yet)
  * .droptools
  * .removemesh
- * .chatbot <time to chat> e.g: .chatbot 3
+ * .chatbot <time per chat> e.g: .chatbot 3
  * .unchatbot
  * .to <player> e.g: .to Glizzy_Phobia
  
