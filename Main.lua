@@ -10,6 +10,10 @@ local plr2 = game.Workspace:FindFirstChild(split[2])
 plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
 end
 
+if message == ".nerdify" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/specowos/lua-projects/main/be-nerded/nerd.lua",true))()
+end
+
 	if message == ".rejoin" then
 		local tpservice= game:GetService("TeleportService")
 		local plr = game.Players.LocalPlayer
@@ -277,7 +281,7 @@ local function LPFOMVV_fake_script() -- ScrollingFrame.LocalScript
 
 	for i,v in pairs(game.Players:GetChildren()) do
 		local clone = template:Clone()
-		clone.Text = v.Name
+		clone.Text = v.Name .. " ("..v.DisplayName .. ")"
 		clone.ImageLabel.Image = game.Players:GetUserThumbnailAsync(game.Players[v.Name].UserId, Enum.ThumbnailType.AvatarBust, Enum.ThumbnailSize.Size420x420)
 		clone.Visible = true
 		clone.Parent = script.Parent
