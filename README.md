@@ -8,6 +8,7 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheMightySource/FE-A
 # Press Right Ctrl to open player list (press a name and it sets clipboard for easy use)
 ## Commands
  * .rejoin
+ * .nerdify (must wear https://www.roblox.com/catalog/9120783085/Nerd-Alert)
  * .execute <file name> e.g: .execute Script.lua (a file named "Script.lua" must be located in your workspace folder)
  * .orbit <full player name> <speed> <radius> <eclipse> e.g: .orbit Glizzy_Phobia 1 8 1
  * .unorbit
