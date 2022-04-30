@@ -12,9 +12,9 @@ local plr2 = game.Workspace:FindFirstChild(split[2])
 plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
 end
 
-if message == ".nerdify" then
+if split[1] == ".nerdify" then
 	--// set this as u want
-local hat = getgenv().NerdifyHat
+local hat = split[2]
 local debug_prints = true --// prints when something happens ex: when script welds get deleted
 
 --// keep these as defualt
