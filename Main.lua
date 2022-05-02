@@ -5,6 +5,10 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
 	if message == ".unorbit" then
 		getgenv().Orbitingygifqwdoqu = false
 	end
+		
+		if message == ".cmds" then
+			print(' * .cmds\n * .rejoin\n * .nerdify {hat name} e.g: .nerdify Nerd (use dex to find hat name, default is Nerd Hat https://www.roblox.com/catalog/9120783085/Nerd-Alert)\n * .execute {file name} e.g: .execute Script.lua (a file named "Script.lua" must be located in your workspace folder)\n * .orbit {full player name} {speed} {radius} {eclipse} e.g: .orbit Glizzy_Phobia 1 8 1\n * .unorbit\n * .annoy {full player name} e.g: .annoy Glizzy_Phobia\n * .unannoy\n * .grabtools (hasnt been tested yet)\n * .droptools\n * .removemesh * .chatbot {time per chat} e.g: .chatbot 3\n * .unchatbot\n * .to {player} e.g: .to Glizzy_Phobia')
+			end
 
 if split[1] == ".to" then
 local plr1 = game.Players.LocalPlayer.Character
