@@ -22,6 +22,5 @@ credits to spec for nerdify https://github.com/specowos/lua-projects/tree/main/b
  * .chatbot {time per chat} e.g: .chatbot 3
  * .unchatbot
  * .to {player} e.g: .to Glizzy_Phobia
- * .crash (only works on Celery)
  
  # BEING WORKED ON!
