@@ -704,7 +704,6 @@ local ImageLabel = Instance.new("ImageLabel")
 --Properties:
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-gethui(ScreenGui)
 ScrollingFrame.Parent = ScreenGui
 ScrollingFrame.Active = true
 ScrollingFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
