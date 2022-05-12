@@ -6,7 +6,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
 		getgenv().Orbitingygifqwdoqu = false
 	end
 		
-		if message == ".crash " then
+		if message == ".crash" then
 		if identifyexecutor() == "Celery" then
 				rnet.shutdown()
 				end
