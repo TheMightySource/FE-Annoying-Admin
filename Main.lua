@@ -511,6 +511,7 @@ GrabTools()
 	end
 
 	if split[1] == ".orbit" then
+			local target = split[2]
 for _, o in pairs(game.Players:GetPlayers()) do
 if string.sub(o.Name:lower(), 1, #target) == target then
 getgenv().Name = o.Name
@@ -541,6 +542,7 @@ end
 	end
 
 	if split[1] == ".annoy" then
+			local target = split[2]
 for _, o in pairs(game.Players:GetPlayers()) do
 if string.sub(o.Name:lower(), 1, #target) == target then
 getgenv().annoyname = o.Name
