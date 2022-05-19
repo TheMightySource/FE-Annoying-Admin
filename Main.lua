@@ -15,9 +15,16 @@ game.Players.LocalPlayer.Chatted:Connect(function(message)
 			end
 
 if split[1] == ".to" then
+	local target = split[2]
+
+					for _, o in pairs(game.Players:GetPlayers()) do
+
+						if string.sub(o.Name:lower(), 1, #target) == target then
 local plr1 = game.Players.LocalPlayer.Character
-local plr2 = game.Workspace:FindFirstChild(split[2])
+local plr2 = o.Character
 plr1.HumanoidRootPart.CFrame = plr2.HumanoidRootPart.CFrame * CFrame.new(0,2,0)
+end
+				end
 end
 
 if split[1] == ".nerdify" then
@@ -504,8 +511,12 @@ GrabTools()
 	end
 
 	if split[1] == ".orbit" then
+for _, o in pairs(game.Players:GetPlayers()) do
+if string.sub(o.Name:lower(), 1, #target) == target then
+getgenv().Name = o.Name
+end
+	end
 		getgenv().Orbitingygifqwdoqu = true
-		getgenv().Name = split[2]
 		local lpr = game.Players.LocalPlayer.Character.HumanoidRootPart
 		getgenv().speed = split[3]
 		getgenv().radius = split[4] --- orbit size
@@ -530,8 +541,13 @@ GrabTools()
 	end
 
 	if split[1] == ".annoy" then
+for _, o in pairs(game.Players:GetPlayers()) do
+if string.sub(o.Name:lower(), 1, #target) == target then
+getgenv().annoyname = o.Name
+end
+	end
 		getgenv().annoyingygifqwdoqu = true
-		getgenv().annoyname = split[2]
+		
 		game:GetService('RunService').Stepped:connect(function()
 			if getgenv().annoyingygifqwdoqu == true then
 				if game.Players:FindFirstChild(getgenv().annoyname) then
