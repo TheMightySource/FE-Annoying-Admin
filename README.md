@@ -1,5 +1,8 @@
 # FE Annoying Admin
 
+## Update May 19 2022
+ * Added shortened names
+
 ## Script
 Open sourced project made by Phobia
 ```lua
