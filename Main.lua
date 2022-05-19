@@ -7,11 +7,52 @@
 		end
 			
 			if message == ".cmds" then
-				print(' COMMANDS: \n *.cmds\n * .rejoin\n * .nerdify {hat name} e.g: .nerdify Nerd (use dex to find hat name, default is Nerd Hat https://www.roblox.com/catalog/9120783085/Nerd-Alert)\n * .execute {file name} e.g: .execute Script.lua (a file named "Script.lua" must be located in your workspace folder)\n * .orbit {full player name} {speed} {radius} {eclipse} e.g: .orbit Glizzy_Phobia 1 8 1\n * .unorbit\n * .annoy {full player name} e.g: .annoy Glizzy_Phobia\n * .unannoy\n * .grabtools (hasnt been tested yet)\n * .droptools\n * .removemesh\n * .chatbot {time per chat} e.g: .chatbot 3\n * .unchatbot\n * .to {player} e.g: .to Glizzy_Phobia')
+				print(' COMMANDS: \n * .cmds\n * .rejoin\n * .nerdify {hat name} e.g: .nerdify Nerd (use dex to find hat name, default is Nerd Hat https://www.roblox.com/catalog/9120783085/Nerd-Alert)\n * .execute {file name} e.g: .execute Script.lua (a file named "Script.lua" must be located in your workspace folder)\n * .orbit {full player name} {speed} {radius} {eclipse} e.g: .orbit Glizzy_Phobia 1 8 1\n * .unorbit\n * .annoy {full player name} e.g: .annoy Glizzy_Phobia\n * .unannoy\n * .grabtools (hasnt been tested yet)\n * .droptools\n * .removemesh\n * .chatbot {time per chat} e.g: .chatbot 3\n * .unchatbot\n * .to {player} e.g: .to Glizzy_Phobia\n * .fling {player} e.g: .fling Glizzy_Phobia')
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "FE Annoying Admin";
 			Text = "Check console (F9) for a list of commands."
 		})
+				end
+				
+				if split[1] == ".fling" then
+					for _, o in pairs(game.Players:GetPlayers()) do
+
+					local playerName = string.lower(o.Name)
+					if string.match(playerName,string.lower(split[2])) then
+						if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+	local plr1 = game.Players.LocalPlayer.Character
+	local flinging = true
+local OriginalPosition = plr1.HumanoidRootPart.CFrame
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+local Target = Players:FindFirstChild(o.Name)
+
+local BodyAngularVelocity = Instance.new("BodyAngularVelocity")
+BodyAngularVelocity.AngularVelocity = Vector3.new(10^6, 10^6, 10^6)
+BodyAngularVelocity.MaxTorque = Vector3.new(10^6, 10^6, 10^6)
+BodyAngularVelocity.P = 10^6
+
+-- Start
+if not Target then return end
+BodyAngularVelocity.Parent = LocalPlayer.Character.HumanoidRootPart
+
+while Target.Character.HumanoidRootPart and LocalPlayer.Character.HumanoidRootPart do
+	   if flinging == true then
+   RunService.RenderStepped:Wait()
+   LocalPlayer.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame * LocalPlayer.Character.HumanoidRootPart.CFrame.Rotation
+   LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new()
+end
+end
+   
+BodyAngularVelocity.Parent = nil
+wait(2)
+flinging = false
+plr1.CFrame = OriginalPosition
+end
+end
+end
 				end
 
 	if split[1] == ".to" then
