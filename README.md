@@ -25,5 +25,6 @@ credits to spec for nerdify https://github.com/specowos/lua-projects/tree/main/b
  * .chatbot {time per chat} e.g: .chatbot 3
  * .unchatbot
  * .to {player} e.g: .to Glizzy_Phobia
+ * .fling {player} e.g: .fling Glizzy_Phobia
  
  # BEING WORKED ON!
