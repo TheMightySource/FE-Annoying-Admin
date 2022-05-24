@@ -72,11 +72,18 @@ end
 	end
 
 	if split[1] == ".nerdify" then
-		--// set this as u want
-	local hat = split[2]
+		--// set this as u w
+
+						for _, o in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+
+					local shortname = string.lower(o.Name)
+					if string.match(shortname,string.lower(split[2])) then
+				getgenv().FENerdifyHat = o.Name	
+	end
+	end
 	local debug_prints = true --// prints when something happens ex: when script welds get deleted
 
-	--// keep these as defualt
+	local hat = getgenv().FENerdifyHat
 	local VER = "1.0.0c"
 	local nerd = game:GetService("Players").LocalPlayer.Character:FindFirstChild(hat)
 	local chr = game:GetService("Players").LocalPlayer.Character
